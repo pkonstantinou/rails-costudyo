@@ -1,0 +1,11 @@
+.info-card {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid $element-border;
+}
+
+.info-card:hover {
+  background-color: $element-hover;
+  cursor: pointer;
+}

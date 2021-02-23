@@ -1,4 +1,17 @@
-<h1><%= @space.title %></h1>
-<h5>Location: <%= @space.location %></h5>
-<p><%= @space.description %></p>
-<p><%= @space.price %>€ pp/pd</p>
+<h1 class="text-center">Costudy space in <%= @space.location %></h1>
+<div class="row my-5">
+  <div class="col-sm-7">
+    <h2><%= @space.title %></h2>
+    <h5>Location: <%= @space.location %></h5>
+    <p><%= @space.description %></p>
+    <p><%= @space.price %>€ pp/pd</p>
+  </div>
+  <div class="col-sm-5">
+    <div class="spaces__map" style="background-image: url('<%= image_path "map.png" %>');"></div>
+    <div class="spaces__info info-card">
+      <p><strong>Address:</strong> <%= @space.location %></p>
+      <p><strong>Phone:</strong> +49 30 2343465</p>
+      <p><strong>Opening hours:</strong> 9:00 - 18:00</p>
+    </div>
+  </div>
+</div>
