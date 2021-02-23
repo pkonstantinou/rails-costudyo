@@ -1,0 +1,8 @@
+<h1>All spaces</h1>
+<ul>
+<% @spaces.each do |space| %>
+  <%= link_to space_path(space) do %>
+    <li><%= "#{space.title} - #{space.location}" %></li>
+  <% end %>
+<% end %>
+</ul>
