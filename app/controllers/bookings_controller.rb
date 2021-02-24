@@ -4,9 +4,13 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(params[:booking])
-    if success
-      redirect_to confirm_page
+    @booking = Booking.new(booking_params)
+    space = Space.find(params[:space_id])
+    @booking.space = space
+    @booking.user = current_user
+
+    if @booking.save
+      redirect_to booking_confirmation_path(@booking)
     else
       render 'spaces/show'
     end
@@ -15,6 +19,9 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
+    dates = params[:booking][:starting_date].split(' to ')
+    params[:booking][:starting_date] = dates[0]
+    params[:booking][:ending_date] = dates[1]
     params.require(:booking).permit(:starting_date, :ending_date)
   end
 end
