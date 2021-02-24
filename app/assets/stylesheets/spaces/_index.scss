@@ -32,3 +32,35 @@
   background-color: $element-hover;
   cursor: pointer;
 }
+
+.datepicker-card {
+  border-radius: 15px;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  background-color: $white;
+  box-shadow: 0 0 10px $element-border;
+
+  .flatpickr-calendar {
+    box-shadow: none;
+  }
+
+  .flatpickr-day.startRange,
+  .flatpickr-day.endRange {
+    color: $white;
+    background-color: $dark-pink;
+    border-color: $dark-pink;
+  }
+
+  .datepicker-btn {
+    color: $white;
+    background-color: $dark-pink;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .datepicker-btn:hover {
+    background-color: $purple;
+  }
+}
