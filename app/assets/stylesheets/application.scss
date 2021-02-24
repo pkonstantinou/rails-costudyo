@@ -7,9 +7,15 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "@splidejs/splide/dist/css/splide.min.css";
+@import "flatpickr/dist/themes/light";
 
 // Your CSS partials
 @import "components/index";
 @import "components/card";
 @import "components/btn";
 @import "pages/index";
+@import "spaces/index";
+
+// Global styles
+@import "global";
