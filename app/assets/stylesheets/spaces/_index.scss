@@ -1,8 +1,34 @@
-@import "map";
-
-.spaces__info {
+.space-description-card {
+  border: 1px solid $element-border;
+  border-radius: 15px;
+  padding: 1.5rem;
   margin-top: 3rem;
+}
+
+.space-info-card {
+  height: 500px;
+  border: 1px solid $element-border;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.space-info-card__map {
+  width: 100%;
+  height: 70%;
+  background-position: center;
+  background-size: cover;
+}
+
+.space-info-card__details {
+  width: 100%;
+  height: 30%;
+  padding: 1.5rem;
   p {
     margin: 0.5rem;
   }
+}
+
+.space-info-card__details:hover {
+  background-color: $element-hover;
+  cursor: pointer;
 }

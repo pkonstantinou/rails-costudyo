@@ -10,6 +10,7 @@ const initSplide = () => {
     gap: 10,
     pagination: false,
     cover: true,
+    drag: false,
     breakpoints: {
       600: {
         fixedWidth: 66,

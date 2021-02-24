@@ -33,15 +33,19 @@
         </div>
       </div>
     </div>
-    <p><%= @space.description %></p>
-    <p><%= @space.price %>€ pp/pd</p>
+    <div class="space-description-card mb-4 mb-sm-0">
+      <p><%= @space.description %></p>
+      <p><strong><%= @space.price %>€</strong> per day</p>
+    </div>
   </div>
   <div class="col-sm-5 pl-sm-3">
-    <div class="spaces__map" style="background-image: url('<%= image_path "map.png" %>');"></div>
-    <div class="spaces__info info-card">
-      <p><strong>Address:</strong> <%= @space.location %></p>
-      <p><strong>Phone:</strong> +49 30 2343465</p>
-      <p><strong>Opening hours:</strong> 9:00 - 18:00</p>
+    <div class="d-flex flex-column space-info-card">
+      <div class="space-info-card__map" style="background-image: url('<%= image_path "map.png" %>');"></div>
+      <div class="space-info-card__details">
+        <p><strong>Address:</strong> <%= @space.location %></p>
+        <p><strong>Phone:</strong> +49 30 2343465</p>
+        <p><strong>Opening hours:</strong> 9:00 - 18:00</p>
+      </div>
     </div>
   </div>
 </div>
