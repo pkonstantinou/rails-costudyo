@@ -1,0 +1,58 @@
+<h1 class="text-center"><%= @space.title %> (<%= @space.location %>)</h1>
+<div class="row my-5">
+  <div class="col-sm-7 pr-sm-5">
+    <div class="slider">
+      <div id="primary-slider">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="secondary-slider">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="space-description-card mb-4 mb-sm-0">
+      <p><%= @space.description %></p>
+      <p><strong><%= @space.price %>€</strong> per day</p>
+    </div>
+  </div>
+  <div class="col-sm-5 pl-sm-3">
+    <div class="d-flex flex-column space-info-card">
+      <div class="space-info-card__map" style="background-image: url('<%= image_path "map.png" %>');"></div>
+      <div class="space-info-card__details">
+        <p><strong>Address:</strong> <%= @space.location %></p>
+        <p><strong>Phone:</strong> +49 30 2343465</p>
+        <p><strong>Opening hours:</strong> 9:00 - 18:00</p>
+      </div>
+    </div>
+    <div class="form-wrapper d-flex flex-column justify-content-center align-items-center" style="width: 400px; margin: 0 auto;">
+      <%= simple_form_for :search, method: "get" do |f| %>
+        <%= f.input :starts_at, as: :string, required: false, label: false, input_html: {class: "datepicker invisible"} %>
+        <%# <%= f.button :submit, "Book", class: "btn btn-flat" %>
+      <% end %>
+      <a href="/bookings/2" class="btn btn-flat" style="width:80%;">Book</a>
+    </div>
+  </div>
+</div>

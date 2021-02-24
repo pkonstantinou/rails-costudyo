@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card" id="large-card" style="width: 80vw">
+      <div class="card-body text-center">
+        <h3 class=" my-4">Thank you for your booking <b><%= @booking.user.email %></b>!</h3>
+        <img class="card-img-top p-2" src="https://cdn.pixabay.com/photo/2017/03/28/12/11/chairs-2181960_960_720.jpg" alt="dummy-costudyo-image" style="width:60%;" >
+        <p>Your booking is confirmed. You paid €<%=@booking.space.price%> per day to book <b><%= @booking.space.title %></b> from <%= @booking.starting_date.strftime('%a %d %b %Y') %> until <%= @booking.ending_date.strftime('%a %d %b %Y') %></p>
+        <%= link_to "Go back to all spaces", spaces_path %>
+      </div>
+    </div>
+  </div>
+</div>
