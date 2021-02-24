@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   def confirm
+    @booking = Booking.find(params[:id])
   end
 
   def create
