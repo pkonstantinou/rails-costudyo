@@ -3,7 +3,7 @@
   width: 250px;
   background-color: $white;
   border: 1px solid $light-pink;
-  border-radius: 5px;
+  border-radius: 10px;
   color: $black;
 }
 
@@ -12,8 +12,12 @@
 // }
 
 .card img {
-  width: 60%;
+  width: 100%;
 }
+
+#icon {
+  width: 60%;
+} 
 
 #large-card {
   height: auto;
