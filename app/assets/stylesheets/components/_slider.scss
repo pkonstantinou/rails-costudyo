@@ -1,0 +1,17 @@
+#primary-slider {
+  .splide__track {
+    border-radius: 15px;
+  }
+}
+
+#secondary-slider {
+  margin-top: 2rem;
+
+  .splide__list {
+    display: flex;
+  }
+}
+
+.splide__arrows {
+  transform: translateY(-200px);
+}
