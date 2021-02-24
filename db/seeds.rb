@@ -1,10 +1,15 @@
 # Seeding the database in order to test code
 u1 = User.create(email: "dummy@gmail.com", password: "costudyo")
+u2 = User.create(email: "tom@lewagon.com", password: "costudyo")
+u3 = User.create(email: "paschalis@lewagon.com", password: "costudyo")
 
-Space.create(user: u1, title: "Epic study room", location: "Munich", description:"Super fast internet. 100% focus guaranteed.", price: 10)
-Space.create(user: u1, title: "Zen Island", location: "Berlin", description:"Quiet. Free coffee. Comfy chairs.", price: 20)
-Space.create(user: u1, title: "Studio", location: "Berlin", description:"Quiet. Free coffee. Comfy chairs.", price: 20)
-Space.create(user: u1, title: "House study", location: "Munich", description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit.", price: 20)
-Space.create(user: u1, title: "Studnet paradise", location: "Berlin", description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit.", price: 20)
-Space.create(user: u1, title: "No study. No gain.", location: "Munich", description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit.", price: 20)
-Space.create(user: u1, title: "Focus zone", location: "Berlin", description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit.", price: 20)
+s1 = Space.create(user: u1, title: "Munichen study library", location: "Munich",
+                  description: "Super fast internet. Cheap coffee. 100+ spaces. 100% focus guaranteed.", price: 10)
+Space.create(user: u1, title: "Zen Island", location: "Berlin", description: "Quiet. Free coffee. Comfy chairs.",
+             price: 20)
+Space.create(user: u1, title: "Studio Study", location: "Berlin",
+             description: "Amazing study place. Always fun. Good to learn here.", price: 5)
+Space.create(user: u1, title: "Studyhouse", location: "Munich",
+             description: "Come to our amazing study house. Pass your exams by studying here.", price: 15)
+Space.create(user: u1, title: "Student paradise", location: "Berlin",
+             description: "The best study place in Berlin. Central location. Quiet place to focus", price: 20)

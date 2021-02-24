@@ -47,12 +47,13 @@
         <p><strong>Opening hours:</strong> 9:00 - 18:00</p>
       </div>
     </div>
-    <div class="form-wrapper d-flex flex-column justify-content-center align-items-center" style="width: 400px; margin: 0 auto;">
-      <%= simple_form_for :search, method: "get" do |f| %>
-        <%= f.input :starts_at, as: :string, required: false, label: false, input_html: {class: "datepicker invisible"} %>
-        <%# <%= f.button :submit, "Book", class: "btn btn-flat" %>
-      <% end %>
-      <a href="/bookings/2" class="btn btn-flat" style="width:80%;">Book</a>
+    <div class="datepicker-card">
+      <div class="d-flex flex-column justify-content-center align-items-center" style="width: 400px; margin: 0 auto;">
+        <%= simple_form_for [@space, @booking] do |f| %>
+          <%= f.input :starting_date, as: :string, required: false, label: false, input_html: {class: "datepicker invisible"} %>
+          <%= f.button :submit, "Book", class: "btn btn-flat datepicker-btn", style: 'width:100%' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
