@@ -1,6 +1,12 @@
 .card {
   height: 380px;
   width: 250px;
-  background-color: $light-pink;
+  background-color: $white;
+  border: 1px solid $light-pink;
+  border-radius: 5px;
   color: $black;
+}
+
+.card img {
+  width: 60%;
 }
