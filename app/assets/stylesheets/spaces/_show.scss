@@ -1,0 +1,66 @@
+.space-description-card {
+  border: 1px solid $element-border;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+.space-info-card {
+  height: 500px;
+  border: 1px solid $element-border;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.space-info-card__map {
+  width: 100%;
+  height: 70%;
+  background-position: center;
+  background-size: cover;
+}
+
+.space-info-card__details {
+  width: 100%;
+  height: 30%;
+  padding: 1.5rem;
+  p {
+    margin: 0.5rem;
+  }
+}
+
+.space-info-card__details:hover {
+  background-color: $element-hover;
+  cursor: pointer;
+}
+
+.datepicker-card {
+  border-radius: 15px;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  background-color: $white;
+  box-shadow: 0 0 10px $element-border;
+
+  .flatpickr-calendar {
+    box-shadow: none;
+  }
+
+  .flatpickr-day.startRange,
+  .flatpickr-day.endRange {
+    color: $white;
+    background-color: $dark-pink;
+    border-color: $dark-pink;
+  }
+
+  .datepicker-btn {
+    color: $white;
+    background-color: $dark-pink;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .datepicker-btn:hover {
+    background-color: $purple;
+  }
+}
