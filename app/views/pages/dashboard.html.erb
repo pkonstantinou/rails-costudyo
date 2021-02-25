@@ -1,27 +1,28 @@
-<h1>Dashboard</h1>
-<div>
-  <h3>My spaces</h3>
-  <%= link_to 'Add new space', new_space_path %>
-  <ul>
-  <% current_user.owned_spaces.each do |space|%>
-    <li>
-      <%= space.title %>
-      <%= link_to 'Edit', edit_space_path(space) %>
-      <%= link_to 'Delete', space_path(space), method: :delete, data: {confirm: 'Are you sure?'} %>
-    </li>
-  <% end %>
-  </ul>
-</div>
+<div class="container dashboard my-5">
+  <h1>Dashboard</h1>
+  <div>
+    <h3>My spaces</h3>
+    <%= link_to 'Add new space', new_space_path %>
+    <ul>
+    <% current_user.owned_spaces.each do |space|%>
+      <li>
+        <%= space.title %>
+        <%= link_to 'Edit', edit_space_path(space) %>
+        <%= link_to 'Delete', space_path(space), method: :delete, data: {confirm: 'Are you sure?'} %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
 
-<div>
-  <h3>My bookings</h3>
-  <ul>
-  <% current_user.bookings.each do |booking| %>
-    <li>
-      <%= booking.space.title %>
-      <%= link_to 'Delete', booking_path(booking), method: :delete, data: {confirm: 'Are you sure?'} %>
-    </li>
-  <% end %>
-  </ul>
+  <div>
+    <h3>My bookings</h3>
+    <ul>
+    <% current_user.bookings.each do |booking| %>
+      <li>
+        <%= booking.space.title %>
+        <%= link_to 'Delete', booking_path(booking), method: :delete, data: {confirm: 'Are you sure?'} %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
 </div>
-
