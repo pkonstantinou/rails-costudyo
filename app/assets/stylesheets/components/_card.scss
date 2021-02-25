@@ -7,9 +7,9 @@
   color: $black;
 }
 
-// .card-body {
-// TO DO d-flex flex-column justify-content-between
-// }
+#my-bookings-card {
+  height: auto;
+}
 
 .card img {
   width: 100%;
@@ -21,5 +21,8 @@
 
 #large-card {
   height: auto;
-  background-color: white;
+}
+
+#button-warning {
+  background-color: red;
 }
