@@ -8,6 +8,10 @@ class SpacesController < ApplicationController
     @booking = Booking.new
   end
 
+  def new
+    @space = Space.new
+  end
+
   private
 
   def space_params
