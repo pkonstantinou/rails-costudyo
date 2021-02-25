@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :bookings
   has_many :spaces, through: :bookings
-  has_many :owned_spaces, class_name: "Space", foreign_key: :owner_id
+  has_many :owned_spaces, class_name: "Space", foreign_key: :user_id
 end
