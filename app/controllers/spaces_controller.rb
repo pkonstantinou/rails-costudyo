@@ -8,9 +8,32 @@ class SpacesController < ApplicationController
     @booking = Booking.new
   end
 
+  def new
+    @space = Space.new
+  end
+
+  def create
+    @space = Space.new(space_params)
+    @space.user = current_user
+
+    if @space.save
+      redirect_to dashboard_path
+    else
+      render 'new'
+    end
+  end
+
+  def destroy
+    @space = Space.find(params[:id])
+    @space.photos.purge if @space.photos.attached?
+    @space.destroy
+
+    redirect_to dashboard_path
+  end
+
   private
 
   def space_params
-    params.require(:space).permit(:name, :description, :location, :price)
+    params.require(:space).permit(:title, :description, :location, :price, photos: [])
   end
 end

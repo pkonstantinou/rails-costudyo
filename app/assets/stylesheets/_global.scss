@@ -5,3 +5,10 @@ h1 {
 h2 {
   font-size: 1.6rem;
 }
+
+.main-wrapper {
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
