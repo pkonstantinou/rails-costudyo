@@ -35,6 +35,3 @@ s4 = Space.new(user_id: u1.id, title: "Studyhouse", location: "Munich",
 s4.photos.attach(io: file7, filename: 'space4-1.png', content_type: 'image/png')
 s4.photos.attach(io: file8, filename: 'space4-2.png', content_type: 'image/png')
 s4.save!
-
-# Space.create(user: u1, title: "Student paradise", location: "Berlin",
-#              description: "The best study place in Berlin. Central location. Quiet place to focus", price: 20)
