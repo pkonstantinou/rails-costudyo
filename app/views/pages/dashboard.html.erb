@@ -4,7 +4,7 @@
 
   <h3>My spaces</h3>
   <%= link_to 'Add new space', new_space_path %>
-  <div class="row">
+  <div class="row dashboard-container">
     <% current_user.owned_spaces.each do |space|%>
       <div class="col-12 col-md-6 col-lg-3 mb-4">
         <div class="card" id="my-bookings-card">
@@ -14,6 +14,8 @@
             <% end %>
             <p><strong><%= link_to space.title, space_path(space) %></strong></p>
             <p>Price: €<%= space.price %> per day</p>
+            <p>This space has <%= space.bookings.count() %> bookings</p>
+
             <%# <%= link_to 'Edit space', edit_space_path(space), class: "btn btn-flat m-2" %>
             <%= link_to 'Delete', space_path(space), method: :delete, data: {confirm: 'Are you sure?'} , class: "btn btn-flat", id: "button-warning"  %>
           </div>
