@@ -13,3 +13,19 @@
   color: white;
   background-color: #f15c5cb6;
 }
+
+.btn-pink {
+  color: $white;
+  background-color: $dark-pink;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-pink:hover {
+  background-color: $purple;
+  color: $white;
+}
