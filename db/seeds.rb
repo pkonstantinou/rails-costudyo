@@ -1,5 +1,7 @@
 require 'open-uri'
 
+p "Seeding..."
+
 u1 = User.create!(email: "tom@lewagon.com", password: "costudyo")
 u2 = User.create!(email: "paschalis@lewagon.com", password: "costudyo")
 
@@ -35,3 +37,5 @@ s4 = Space.new(user_id: u1.id, title: "Studyhouse", location: "Munich",
 s4.photos.attach(io: file7, filename: 'space4-1.png', content_type: 'image/png')
 s4.photos.attach(io: file8, filename: 'space4-2.png', content_type: 'image/png')
 s4.save!
+
+p "Seeding ended"

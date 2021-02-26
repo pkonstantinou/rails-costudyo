@@ -1,3 +1,4 @@
+<div class="top-offset"></div>
 <div class="container mt-5">
   <h1 class="mb-3 text-center">Add a new space</h1>
   <div class="row">
@@ -6,10 +7,10 @@
         <%= simple_form_for(@space) do |f| %>
           <%= f.input :title, input_html: { maxlength: '18' } %>
           <%= f.input :description %>
-          <%= f.input :price %>
+          <%= f.input :price, label: 'Price per day' %>
           <%= f.input :location %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          <%= f.submit %>
+          <%= f.button :submit, class: 'btn btn-pink' %>
         <% end %>
       </div>
     </div>
