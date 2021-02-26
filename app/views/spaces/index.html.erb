@@ -1,6 +1,6 @@
 <div class="container">
    <div class="banner-content text-center mb-4">
-    <h1 class="mt-5">Study spaces in Munich</h1>
+    <h1 class="mt-5">Study spaces around the world</h1>
   </div>
 
   <div class="row mb-5">
@@ -12,6 +12,7 @@
               <%= cl_image_tag space.photos[0].key, class: 'card-img-top p-2' %>
             <% end %>
             <h4><%= space.title %></h4>
+            <p><i class="fas fa-map-marker-alt mr-1"></i><%= space.location %></p>
             <p class="card-text"><%= space.description.slice(0..50)... %></p>
             <%= link_to "See details", space_path(space), class: "btn btn-flat" %>
           </div>

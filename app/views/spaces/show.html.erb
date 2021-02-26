@@ -39,7 +39,7 @@
              data-marker="<%= @marker.to_json %>"
              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
         <div class="space-info-card__details">
-          <p><strong>Address:</strong> <%= @space.location %></p>
+          <p><i class="fas fa-map-marker-alt mr-1 text-muted"></i><%= @space.location %></p>
           <p><strong>Phone:</strong> +49 30 2343465</p>
           <p><strong>Opening hours:</strong> 9:00 - 18:00</p>
         </div>
