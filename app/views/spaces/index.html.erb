@@ -16,7 +16,7 @@
             <p class="text-muted"><i class="fas fa-map-marker-alt mr-1"></i><%= space.location %></p>
             <p class="card-text">
               <% if space.description.size > 40 %>
-                <%= space.description.slice(0..40)... %>
+                <%= "#{space.description.slice(0..40)}..." %>
               <% else %>
                 <%= space.description %>
               <% end %>
