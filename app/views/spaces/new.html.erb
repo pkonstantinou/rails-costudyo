@@ -4,7 +4,7 @@
     <div class="col-md-6 offset-md-3 ">
       <div class="mb-5">
         <%= simple_form_for(@space) do |f| %>
-          <%= f.input :title %>
+          <%= f.input :title, input_html: { maxlength: '18' } %>
           <%= f.input :description %>
           <%= f.input :price %>
           <%= f.input :location %>
