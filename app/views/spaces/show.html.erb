@@ -33,7 +33,11 @@
     </div>
     <div class="col-sm-5 pl-sm-3">
       <div class="d-flex flex-column space-info-card">
-        <div class="space-info-card__map" style="background-image: url('<%= image_path "map.png" %>');"></div>
+        <div id="map"
+             class="space-info-card__map"
+             style="width: 100%; height: 600px;"
+             data-marker="<%= @marker.to_json %>"
+             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
         <div class="space-info-card__details">
           <p><strong>Address:</strong> <%= @space.location %></p>
           <p><strong>Phone:</strong> +49 30 2343465</p>

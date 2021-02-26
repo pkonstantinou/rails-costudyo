@@ -6,6 +6,9 @@ class SpacesController < ApplicationController
   def show
     @space = Space.find(params[:id])
     @booking = Booking.new
+
+    # Prepare the marker for the map
+    @space.geocoded? && @marker = { lat: @space.latitude, lng: @space.longitude }
   end
 
   def new
