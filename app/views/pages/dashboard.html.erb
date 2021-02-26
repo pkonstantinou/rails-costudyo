@@ -16,9 +16,7 @@
             <% end %>
             <p><strong><%=space.title %></strong></p>
             <p>Price: €<%= space.price %> per day</p>
-            <p>This space has <%= space.bookings.count() %> bookings</p>
-
-            <%# <%= link_to 'Edit space', edit_space_path(space), class: "btn btn-flat m-2" %>
+            <p>This space has <%= pluralize space.bookings.count(), 'booking' %></p>
             <%= link_to "Details", space_path(space), class: "btn-pink m-2" %>
             <%= link_to 'Delete', space_path(space), method: :delete, data: {confirm: 'Are you sure?'}, id: "delete-text" %>
           </div>
