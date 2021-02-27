@@ -1,0 +1,20 @@
+<h3 class="mt-5 mb-3">My spaces</h3>
+<%= link_to 'New space', new_space_path, class: "btn-pink topright"%>
+<div class="row">
+  <% current_user.owned_spaces.each do |space|%>
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+      <div class="card" id="my-bookings-card">
+        <div class="card-body d-flex flex-column justify-content-between align-items-center">
+          <% if space.photos.attached? %>
+            <%= cl_image_tag space.photos[0].key, class: 'card-img-top p-2' %>
+          <% end %>
+          <p><strong><%=space.title %></strong></p>
+          <p>Price: €<%= space.price %> per day</p>
+          <p>This space has <%= pluralize space.bookings.count(), 'booking' %></p>
+          <%= link_to "Details", space_path(space), class: "btn-pink m-2" %>
+          <%= link_to 'Delete', space_path(space), method: :delete, data: {confirm: 'Are you sure?'}, id: "delete-text" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
