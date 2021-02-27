@@ -16,7 +16,7 @@
           <% if user_signed_in? %>
             <p class="dropdown-item m-0 navbar__user-email"><%= current_user.email %></p>
             <hr class="dropdown-divider">
-            <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
+            <%= link_to "Dashboard", dashboard_path(tab: 1), class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           <% else %>
             <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item font-weight-bold" %>

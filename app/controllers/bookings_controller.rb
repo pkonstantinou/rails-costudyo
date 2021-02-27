@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.destroy
 
-    redirect_to dashboard_path
+    redirect_to dashboard_path(tab: '2')
   end
 
   private
