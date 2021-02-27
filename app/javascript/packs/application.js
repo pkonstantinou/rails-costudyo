@@ -28,10 +28,12 @@ import { initSplide } from "../plugins/init_splide";
 import { initFlatpickr } from "../plugins/init_flatpickr";
 import { initMapbox } from "../plugins/init_mapbox";
 import { initDatePickerBtn } from "./init_date_picker_btn";
+import { dashboardTabHandler } from "./dashboard_tab_handler";
 
 document.addEventListener("turbolinks:load", () => {
   initSplide();
   initFlatpickr();
   initMapbox();
   initDatePickerBtn();
+  dashboardTabHandler();
 });

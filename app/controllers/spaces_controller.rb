@@ -33,7 +33,7 @@ class SpacesController < ApplicationController
     @space.photos.purge if @space.photos.attached?
     @space.destroy
 
-    redirect_to dashboard_path
+    redirect_to dashboard_path(tab: '1')
   end
 
   private

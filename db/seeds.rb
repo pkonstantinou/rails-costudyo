@@ -14,7 +14,7 @@ file6 = URI.open('https://images.unsplash.com/photo-1521127021408-f33c67dfcb76?i
 file7 = URI.open('https://images.unsplash.com/photo-1604328699206-5f24c5ed8dd4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80')
 file8 = URI.open('https://images.unsplash.com/photo-1554260570-9140fd3b7614?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 
-s1 = Space.new(user_id: u1.id, title: "Munichen library", location: "Munich",
+s1 = Space.new(user_id: u1.id, title: "Munich library", location: "Munich",
                description: "Super fast internet. Cheap coffee. 100+ spaces. 100% focus guaranteed.", price: 10)
 s1.photos.attach(io: file1, filename: 'space1-1.png', content_type: 'image/png')
 s1.photos.attach(io: file2, filename: 'space1-2.png', content_type: 'image/png')
